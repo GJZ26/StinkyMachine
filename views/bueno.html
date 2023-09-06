@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquina Apestosa 1.0</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <nav>
+        <div id="usercontent">
+            <span id="username" style="display: none;">User</span>
+            <button id="logout" style="display: none;">Cerrar Sesión</button>
+            <button id="kill">Apagar</button>
+        </div>
+        <div class="alerts">
+            <span id="alert"></span>
+        </div>
+        <div id="login">
+            <input type="email" name="email" id="email" placeholder="Username">
+            <input type="password" name="pwd" id="pwd" placeholder="Contraseña">
+            <input type="submit" value="Inciar sesion" id="loginaction">
+        </div>
+
+    </nav>
+    <div class="bctp" onclick="scrollToTop()">⬆️ Volver Arriba</div>
+    <main>
+        <div class="segment" id="announce">
+            <h1 style="margin: 0;">¿No se te olvida algo?</h1>
+            <h2 style="margin-top: 12px;">Así como... Iniciar sesión ¿Quizás?</h2>
+            <p>Créeme, es mejor hacer este proceso ahora, nos evitaremos de problemas y estaré agradecido contigo.</p>
+            <p>Sólo recuerda usar el username y contraseña del sitio web.</p>
+        </div>
+
+
+        <div class="segment" style="display: none;" id="segment">
+
+            <h2>
+                Arroja tus archivos .zip acá
+            </h2>
+
+            <p>
+                Y la <strong>Maquina Apestosa</strong> se encargará de analizar y subir las publicaciones por ti (o al
+                menos eso
+                intetará).
+            </p>
+
+            <div class="file-drop" id="collection-file">
+
+                <h1>Tira los archivos aquí</h1>
+                <p>O da click aquí para seleccionarlo, funciona igual</p>
+                <input accept=".zip" type="file" multiple>
+
+            </div>
+
+            <div>
+                <h2>Los siguientes archivos serán procesados:</h2>
+                <ul id="documentList">
+                    <p> Ninguno, claramente...</p>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="contentAnalized">
+        </div>
+
+    </main>
+</body>
+<script src="main.js"></script>
+<script src="classesManager.js"></script>
+<script src="loadAnalizedData.js"></script>
+<script src="killer.js"></script>
+<script src="sender.js"></script>
+<script>
+    function scrollToTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    }
+    </script>
+</html>
